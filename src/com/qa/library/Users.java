@@ -2,7 +2,7 @@ package com.qa.library;
 
 public class Users {
 	
-	private String userId;
+	private int userId;
 	private String name;
 	private String email;
 	private String number;
@@ -12,7 +12,7 @@ public class Users {
 	
 	}
 
-	public Users(String userId, String name, String email, String number) {
+	public Users(int userId, String name, String email, String number) {
 		this.userId = userId;
 		this.name = name;
 		this.email = email;
@@ -20,15 +20,22 @@ public class Users {
 
 	}
 	
-	public Users(String userId) {
+	
+	
+	@Override
+	public String toString() {
+		return "Users [userId=" + userId + ", name=" + name + ", email=" + email + ", number=" + number + "]";
+	}
+
+	public Users(int userId) {
 		this.userId = userId;	
 	}
   
-	public String getId() {
+	public int getId() {
 		return userId;  
 	}
   
-	public void setId(String userId) {
+	public void setId(int userId) {
 		this.userId = userId;  
 	  }
   

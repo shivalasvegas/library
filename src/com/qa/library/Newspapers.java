@@ -1,35 +1,31 @@
 package com.qa.library;
 
 public class Newspapers extends LibraryItems{
-	private String itemId;
+	private int itemId;
 	private int year;
 	private String title;
 	private String date;
-	
-	public void noise() {
-		System.out.println("BeopBeopBeop!");
-	}
 	
 	public Newspapers() {
 	
 	}
 
-	public Newspapers(String itemId, int year, String title, String date) {
+	public Newspapers(int itemId, int year, String title, String date) {
 		this.itemId = itemId;
 		this.year = year;
 		this.title = title;
 
 	}
 	
-	public Newspapers(String itemId) {
+	public Newspapers(int itemId) {
 		this.itemId = itemId;	
 	}
   
-	public String getId() {
+	public int getId() {
 		return itemId;  
 	}
   
-	public void setId(String itemId) {
+	public void setId(int itemId) {
 		this.itemId = itemId;  
 	  }
   
@@ -49,5 +45,9 @@ public class Newspapers extends LibraryItems{
 		}
 		public String getDate(){
 		  return date;
+		}
+		
+		public void noise() {
+			System.out.println("BeopBeopBeop!");
 		}
 }

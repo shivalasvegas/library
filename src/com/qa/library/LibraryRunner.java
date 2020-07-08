@@ -8,23 +8,16 @@ public class LibraryRunner {
 		
 		Library newTorrington = new Library();
 		
+		newTorrington.addMedium(new Books(00, 1985, "1901", "Harold Ogar"));
+		newTorrington.updateItemAuthor(1, "Lissy Hark");
 		
-		String idTest = "book";
-		int yearTest = 1985;
-		String titleTest = "first book";
-		String authorTest = "Newick Granger";
+		newTorrington.addMedium(new Books(00, 2019, "The Odd Fish", "Bream River"));
+			
+		newTorrington.readLibraryItems();
 		
-		Books item1 = new Books(idTest, yearTest, titleTest, authorTest);
+		newTorrington.addUser(new Users(00, "Mark Howell", "mmkh@go.com", "1234567"));
+		newTorrington.readUserInfo();
 		
-		item1.setAuthor("Lissy Ark");
-		
-		newTorrington.checkInItem(item1.getId());
-		item1.noise();
-		
-		newTorrington.checkOutItem(item1.getId());
-		item1.noise();
-		
-		newTorrington.updateItemAuthor(item1.getAuthor());
 	}
 
 }
